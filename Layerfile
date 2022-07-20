@@ -10,7 +10,7 @@ RUN apt-get update && \
 
 
 COPY . .
-RUN ./install.sh
+RUN ./install.sh --skip-commit-check
 RUN docker-compose up -d
 
 EXPOSE WEBSITE localhost:9000
